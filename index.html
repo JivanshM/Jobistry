@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Job Application</title>
+    
+  </head>
+  <body>
+    <div class="curved-square">
+      <div class="site-name">Jobistry</div>
+      <div class="left-section">
+        <h2>Job Application Form</h2>
+        <form id="jobForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="position">Position</label>
+            <select id="position" name="position" required>
+              <option value="" disabled selected>Select position</option>
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="manager">Manager</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit">Submit Application</button>
+          </div>
+        </form>
+      </div>
+      <div class="divider"></div>
+      <div class="right-section" id="applications">
+      </div>
+    </div>
+
+  </body>
+</html>
