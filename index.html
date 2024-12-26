@@ -210,6 +210,25 @@
         loadApplications();
         form.reset();
       });
+       async function loadApplications() {
+        const response = await fetch("http://localhost:3000/applications");
+        const applications = await response.json();
+
+        applicationsDiv.innerHTML = "";
+        applications.forEach((app) => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+                    <h3>${app.name}</h3>
+                    <p><strong>Email:</strong> ${app.email}</p>
+                    <p><strong>Phone:</strong> ${app.phone}</p>
+                    <p><strong>Position:</strong> ${app.position}</p>
+                `;
+          applicationsDiv.appendChild(card);
+        });
+      }
+
+      loadApplications();
     </script>
 
 
